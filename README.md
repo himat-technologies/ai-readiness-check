@@ -1,77 +1,84 @@
-# AI Readiness Check by Himat Technology
+<div align="center">
 
-A colorful, production-ready web app that audits any public website for **AI search readiness** — crawlability, sitemaps, technical SEO, structured data, content signals, performance, and AI crawler permissions.
+# ✨ AI Readiness Check
 
-> **Live demo:** [himat.tech/free-tools/ai-readiness-check](https://himat.tech/free-tools/ai-readiness-check)
+### Make your website easier for AI to find, understand, and recommend.
 
----
+An AI-search readiness auditor by **Himat Technologies**. Check any public website for crawlability, technical SEO, structured data, content signals, performance, and AI crawler access.
 
-## About Himat Technology
+<a href="https://himat.tech/free-tools/ai-readiness-check"><strong>🚀 Try the live demo</strong></a>
 
-| | |
-|---|---|
-| **Website** | [himat.co.in](https://himat.co.in) |
-| **Email** | [info@himat.co.in](mailto:info@himat.co.in) |
-| **Phone** | [94452 34023](tel:+919445234023) |
-| **Demo tool** | [AI Readiness Check](https://himat.tech/free-tools/ai-readiness-check) |
+<br />
 
-### Social
+![Next.js](https://img.shields.io/badge/Next.js-15-111827?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)
 
-- [Facebook — Himat Technology](https://www.facebook.com/people/Himat-technology/61593829197445/)
-- [LinkedIn — Himat Technology](https://www.linkedin.com/company/himat-technology)
-- [Instagram — @himat_technology](https://www.instagram.com/himat_technology?igsh=djdmcGxweWtwYWI0)
+</div>
 
 ---
 
-## Features
+## 🌈 What it does
 
-- Live website analysis via `POST /api/analyze`
-- Weighted AI Readiness Score (0–100) across 6 categories
-- Detailed pass / warning / fail audit checks
-- Prioritized recommendations with suggested fixes
-- Platform compatibility for ChatGPT, Google AI Overviews, Perplexity, Gemini, Claude, Bing Copilot
-- AI crawler detection (GPTBot, ClaudeBot, PerplexityBot, and more)
-- Structured data inspector (JSON-LD, Microdata, RDFa)
-- JSON + PDF export and copyable audit summary
-- Scan history stored in browser `localStorage`
-- Vibrant, brand-forward UI with Himat contact & social links
+Enter a website URL and get a practical report showing how well that site is prepared for AI-powered search experiences. The results include an overall score, category breakdowns, detailed checks, crawler access, and prioritized recommendations.
 
-## Tech stack
+| 🔎 Audit area | 📋 What is checked |
+|:---|:---|
+| **Crawlability** | Robots directives and AI crawler access |
+| **Sitemap health** | Sitemap discovery and availability |
+| **Technical SEO** | Essential page-level SEO signals |
+| **Content quality** | Content signals that help systems understand a page |
+| **AI discoverability** | Signals used by AI search platforms |
+| **Performance** | Performance-related indicators |
 
-- Next.js 15 (App Router) + TypeScript
-- Tailwind CSS + shadcn-style UI primitives
-- React Hook Form + Zod
-- Cheerio, Axios, robots-parser, fast-xml-parser
-- Recharts, Sonner, Lucide React, pdf-lib
+## 💡 Features
 
-## Quick start
+- **Live website analysis** through `POST /api/analyze`
+- **Weighted AI Readiness Score** from 0–100 across six categories
+- **Clear audit results** with pass, warning, and fail checks
+- **Actionable recommendations** with suggested fixes
+- **Platform compatibility** for ChatGPT, Google AI Overviews, Perplexity, Gemini, Claude, and Bing Copilot
+- **AI crawler detection** including GPTBot, ClaudeBot, and PerplexityBot
+- **Structured data inspection** for JSON-LD, Microdata, and RDFa
+- **Report exports** in JSON and PDF, plus a copyable summary
+- **Scan history** saved in browser `localStorage`
+- **Responsive, colorful interface** with Himat Technologies contact links
+
+## 🧰 Built with
+
+| Frontend | Analysis & reporting |
+|:---|:---|
+| Next.js 15 · React 19 · TypeScript | Cheerio · Axios · `robots-parser` |
+| Tailwind CSS · shadcn-style UI primitives | `fast-xml-parser` · `pdf-lib` |
+| React Hook Form · Zod | Recharts · Sonner · Lucide React |
+
+## ⚡ Quick start
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Compare against the public demo: [https://himat.tech/free-tools/ai-readiness-check](https://himat.tech/free-tools/ai-readiness-check)
-
-### Other scripts
+### Available scripts
 
 ```bash
-npm run build   # production build
-npm start       # run production server
-npm run lint    # ESLint
+npm run dev     # Start the development server
+npm run build   # Create a production build
+npm start       # Run the production server
+npm run lint    # Run ESLint
 ```
 
-## Environment
+### Environment
 
-Copy `.env.example` to `.env.local` (optional — not required for local scans):
+Environment variables are optional for local scans. If needed, copy `.env.example` to `.env.local`:
 
 ```bash
 cp .env.example .env.local
 ```
 
-## API
+## 🔌 API
 
 ### `POST /api/analyze`
 
@@ -83,53 +90,69 @@ Request:
 }
 ```
 
-Successful response includes `success`, overall `score`, `categories`, `checks`, `recommendations`, `crawlers`, `schemas`, `platforms`, and a full `report` object.
+A successful response includes `success`, `score`, `categories`, `checks`, `recommendations`, `crawlers`, `schemas`, `platforms`, and the full `report` object.
 
-## Project structure
+## 📊 Score guide
 
-```
-app/                  # App Router pages + API
-  api/analyze/        # Analysis endpoint
+| Score | Rating |
+|:---:|:---|
+| 🟢 **90–100** | Excellent |
+| 🔵 **75–89** | Good |
+| 🟠 **50–74** | Needs improvement |
+| 🔴 **0–49** | Poor |
+
+| Category | Weight |
+|:---|:---:|
+| Crawlability | 20% |
+| Sitemap health | 15% |
+| Technical SEO | 20% |
+| Content quality | 15% |
+| AI discoverability | 15% |
+| Performance signals | 15% |
+
+## 🗂️ Project structure
+
+```text
+app/                  App Router pages and API
+  api/analyze/        Website analysis endpoint
 components/
-  charts/             # Score gauge + category chart
-  dashboard/          # Score dashboard + skeletons
-  forms/              # URL analyzer form
-  layout/             # Hero, FAQ, CTA, footer
-  reports/            # Audit, recommendations, export, history
-  ui/                 # Shared UI primitives
-hooks/                # useAnalyze, useScanHistory
+  charts/             Score gauge and category chart
+  dashboard/          Score dashboard and loading skeletons
+  forms/              URL analysis form
+  layout/             Hero, FAQ, CTA, and footer
+  reports/            Audit, recommendations, exports, and history
+  ui/                 Shared UI primitives
+hooks/                Analysis and scan-history hooks
 lib/
-  analyzers/          # Fetch, robots, sitemap, SEO, content, schema, performance
-  scoring/            # Weighted scoring engine
-  site.ts             # Himat brand & contact config
-  export.ts           # JSON summary + PDF generation
-types/                # Shared TypeScript types
+  analyzers/          Fetch, robots, sitemap, SEO, content, schema, performance
+  scoring/            Weighted scoring engine
+  site.ts             Himat brand and contact configuration
+  export.ts           JSON summary and PDF generation
+types/                Shared TypeScript types
 ```
 
-## Scoring weights
+## 🤝 About Himat Technologies
 
-| Category            | Weight |
-|---------------------|--------|
-| Crawlability        | 20%    |
-| Sitemap Health      | 15%    |
-| Technical SEO       | 20%    |
-| Content Quality     | 15%    |
-| AI Discoverability  | 15%    |
-| Performance Signals | 15%    |
+<div align="center">
 
-Score levels: **90–100** Excellent · **75–89** Good · **50–74** Needs Improvement · **0–49** Poor
+| 🌐 Website | ✉️ Email | 📞 Contact | 🚀 Live demo |
+|:---:|:---:|:---:|:---:|
+| [himat.co.in](https://himat.co.in) | [info@himat.co.in](mailto:info@himat.co.in) | [94452 34023](tel:+919445234023) | [AI Readiness Check](https://himat.tech/free-tools/ai-readiness-check) |
 
-## Contact
+### Connect with us
 
-Need help optimizing your site for AI search?
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/people/Himat-technologies/61593829197445/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himat-technologies-14b1051b4)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/himat_technologies?stkn=djdmcGxweWtwYWI0)
 
-- **Email:** [info@himat.co.in](mailto:info@himat.co.in)
-- **Call:** [94452 34023](tel:+919445234023)
-- **Web:** [himat.co.in](https://himat.co.in)
-- **Demo:** [himat.tech free tool](https://himat.tech/free-tools/ai-readiness-check)
+</div>
 
-## License
+## 📄 License
 
 See [LICENSE](./LICENSE).
 
-Built with care by **[Himat Technology](https://himat.co.in)**.
+<div align="center">
+
+**Built with care by [Himat Technologies](https://himat.co.in) · [Try the demo](https://himat.tech/free-tools/ai-readiness-check)**
+
+</div>
